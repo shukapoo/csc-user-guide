@@ -74,6 +74,9 @@ Mats has [Allas tools](https://github.com/CSCfi/allas-cli-utils) installed in th
 ```text
 rclone copy sample1/cannel43/aa_3278830.dat  allas:hiano-project-sample001/sample1/cannel43/aa_3278830.dat
 ```
+Mats has access to his own Allas project too, but he knows that its more efective to copy the data directly to the final
+location in Allas. This is due to fact that copying large files from one bucket to another is not possible inside Allas. Actually, trying to copy the data to a new bucket inside Allas could lead to data loss.
+
 As there is a large amount of data to be transported, the upload takes few days and needs to be done in several batches. When Mats tells that he is ready with the data uploads, Pekka closes the shared bucket:
 ```text
 swift post hiano-project-sample001 -r ""
